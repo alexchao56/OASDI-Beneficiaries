@@ -24,6 +24,7 @@ FIPS_code = function(df){
   state_match = match(df[,3], FIPS[,1])
   df$state_FIPS = FIPS[,3][state_match]
   df$county_FIPS = FIPS[,4][county_match]
+  df=df[c(1,2,3,15,16,4:14)]
   return (df)
 }
 
